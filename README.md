@@ -35,3 +35,22 @@ Sistema web completo para gerenciamento de agendamentos de consultas em clínica
 ```bash
 cd backend
 npm install
+npm run dev
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+
+## Como usar o sistema
+
+1. Acesse http://localhost:5173
+2. Cadastre-se ou faça login:
+   - Paciente: antonio@gmail.com / 123mudar
+   - Secretário: carol@gmail.com / 123mudar
+3. No dashboard do paciente: agende consultas com CEP e veja alerta de clima
+4. No dashboard do secretário: veja todos os agendamentos e exclua se necessário
+
+Desenvolvido por Gabriel Buchud  
+Rio de Janeiro - Março/2026
