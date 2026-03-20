@@ -6,5 +6,7 @@ const { create, getAll, delete: deleteApp } = require('../controllers/appointmen
 router.post('/', auth, create);
 router.get('/', auth, getAll);
 router.delete('/:id', auth, deleteApp);
+router.put('/:id', auth, require('../controllers/appointmentController').update);
+
 
 module.exports = router;
