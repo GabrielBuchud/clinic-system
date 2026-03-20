@@ -1,45 +1,35 @@
 # Clínica Saúde+ - Sistema de Agendamento de Consultas
 
-Projeto desenvolvido para gerenciamento de agendamentos de consultas em clínicas de pequeno porte, com foco em simplicidade, segurança e integração com APIs externas.
+Sistema web completo para gerenciamento de agendamentos de consultas em clínicas de pequeno porte.
 
-## Funcionalidades principais
+## Funcionalidades implementadas
 
 - Cadastro e login seguro de usuários (pacientes e secretários) com autenticação JWT
-- Agendamento de consultas com verificação de disponibilidade de horário
-- Consulta automática de endereço completo pelo CEP (Via API ViaCEP)
+- Agendamento de consultas com verificação de horário disponível
+- Consulta automática de endereço via CEP (ViaCEP)
 - Integração com previsão do tempo (OpenWeatherMap) → alerta de chuva no dia da consulta
-- Dashboard do paciente: visualizar suas consultas + formulário para agendar novas
-- Dashboard do secretário (admin): visualizar todos os agendamentos + excluir consultas
-- Navbar condicional (aparece apenas após login, com nome do usuário e botão "Sair")
-- Proteção de rotas: paciente não acessa painel administrativo e vice-versa
-- Design responsivo e moderno com Tailwind CSS
+- Dashboard do paciente: ver suas consultas + formulário para agendar novas
+- Dashboard do secretário: ver todos os agendamentos + excluir
+- Navbar condicional (aparece só após login, com nome do usuário e botão Sair)
+- Proteção de rotas (paciente não acessa /admin, secretário não acessa /patient)
 
 ## Tecnologias utilizadas
 
 **Frontend**
-- Vue.js 3 (Composition API + `<script setup>`)
-- Vite (build tool)
+- Vue.js 3 (Composition API + <script setup>)
+- Vite
 - Vue Router
-- Axios (para chamadas HTTP)
-- Tailwind CSS (estilização)
+- Axios
+- Tailwind CSS
 
 **Backend**
 - Node.js + Express
 - MongoDB (Atlas) + Mongoose
-- JWT (autenticação)
-- bcryptjs (hash de senhas)
-- Axios (integrações externas)
-
-**Integrações externas**
-- ViaCEP: consulta de endereço por CEP
-- OpenWeatherMap: previsão do tempo e alerta de chuva
+- JWT
+- bcryptjs
+- Axios
 
 ## Como rodar localmente
-
-### Pré-requisitos
-- Node.js v18 ou superior
-- Conta gratuita no MongoDB Atlas
-- Chave gratuita da OpenWeatherMap[](https://openweathermap.org/api)
 
 ### Backend
 ```bash
